@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventrapragada Sai Pranav - Portfolio</title>
+    <style>
+        /* ===== BASIC RESET & GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        body {
+            background-color: #008080; /* Classic teal background */
+            color: #000000;
+            line-height: 1.4;
+            padding: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23008080" width="100" height="100"/><path fill="%23006060" d="M0 0h50v50H0z"/></svg>');
+            background-size: 10px 10px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #c0c0c0; /* Classic gray background */
+            border: 4px solid;
+            border-top-color: #dfdfdf;
+            border-left-color: #dfdfdf;
+            border-right-color: #808080;
+            border-bottom-color: #808080;
+            padding: 20px;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ===== HEADER STYLES ===== */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #000080; /* Navy blue */
+            color: #ffffff;
+            border: 2px solid;
+            border-top-color: #808080;
+            border-left-color: #808080;
+            border-right-color: #000000;
+            border-bottom-color: #000000;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 0px #ff0000; /* Red shadow for retro effect */
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            padding: 5px;
+            background: #000080; /* Navy blue */
+            color: #ffffff;
+            border: 2px solid;
+            border-top-color: #000000;
+            border-left-color: #000000;
+            border-right-color: #808080;
+            border-bottom-color: #808080;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 15px 0;
+            color: #000080; /* Navy blue */
+            border-bottom: 2px dotted #000080;
+            padding-bottom: 5px;
+        }
+        
+        /* ===== NAVIGATION STYLES ===== */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 5px;
+            background: #c0c0c0;
+            color: #000000;
+            text-decoration: none;
+            border: 2px solid;
+            border-top-color: #dfdfdf;
+            border-left-color: #dfdfdf;
+            border-right-color: #808080;
+            border-bottom-color: #808080;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background: #000080;
+            color: #ffffff;
+        }
+        
+        /* ===== CONTENT STYLES ===== */
+        .blink {
+            animation: blink 2s steps(1) infinite;
+            color: #ff0000;
+            font-weight: bold;
+        }
+        
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .marquee {
+            background: #ffff00; /* Yellow */
+            color: #ff0000; /* Red */
+            padding: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+            border: 2px dotted #ff0000;
+        }
+        
+        .divider {
+            height: 4px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="4" viewBox="0 0 10 4"><path fill="%23000000" d="M0 0h5v2H0zM5 2h5v2H5z"/></svg>');
+            margin: 20px 0;
+        }
+        
+        .about-content, .projects-grid {
+            margin: 20px 0;
+        }
+        
+        .project-card {
+            background: #ffffff;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid;
+            border-top-color: #808080;
+            border-left-color: #808080;
+            border-right-color: #dfdfdf;
+            border-bottom-color: #dfdfdf;
+        }
+        
+        .project-card h3 {
+            color: #ff0000; /* Red */
+            border-bottom: 1px dashed #000000;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #c0c0c0;
+            color: #000000;
+            text-decoration: none;
+            border: 2px solid;
+            border-top-color: #dfdfdf;
+            border-left-color: #dfdfdf;
+            border-right-color: #808080;
+            border-bottom-color: #808080;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            background: #000080;
+            color: #ffffff;
+        }
+        
+        /* ===== VISITOR COUNTER (RETRO STYLE) ===== */
+        .counter {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: #000000;
+            color: #00ff00; /* Green */
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            border: 3px solid #00ff00;
+        }
+        
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-top-color: #808080;
+            border-left-color: #808080;
+            border-right-color: #dfdfdf;
+            border-bottom-color: #dfdfdf;
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ===== HEADER WITH YOUR NAME ===== -->
+        <header>
+            <h1>VENTRAPRAGADA SAI PRANAV</h1>
+            <p>Developer & Creative Problem Solver</p>
+        </header>
+        
+        <!-- ===== ANIMATED MARQUEE (TYPICAL RETRO ELEMENT) ===== -->
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left">WELCOME TO MY PORTFOLIO! UNDER CONSTRUCTION! PLEASE SIGN MY GUESTBOOK!</marquee>
+        </div>
+        
+        <!-- ===== NAVIGATION MENU ===== -->
+        <nav>
+            <a href="#about">ABOUT ME</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        
+        <!-- ===== VISITOR COUNTER (RETRO STYLE) ===== -->
+        <div class="counter">
+            <span class="blink">VISITORS:</span> 0012345
+        </div>
+        
+        <!-- ===== ABOUT ME SECTION ===== -->
+        <section id="about">
+            <h2><span class="blink">*</span> ABOUT ME <span class="blink">*</span></h2>
+            <div class="about-content">
+                <h3>HELLO WORLD!</h3>
+                <p>I'm Ventrapragada Sai Pranav, a passionate developer with interest in creating innovative solutions and exploring new technologies.</p>
+                
+                <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or learning about advancements in the tech world.</p>
+                
+                <div class="divider"></div>
+                
+                <h3>MY SKILLS</h3>
+                <p>> HTML & CSS</p>
+                <p>> JavaScript</p>
+                <p>> Problem Solving</p>
+                <p>> Creative Design</p>
+            </div>
+        </section>
+        
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects">
+            <h2><span class="blink">*</span> MY PROJECTS <span class="blink">*</span></h2>
+            <div class="projects-grid">
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <h3>TRADING SIMULATOR</h3>
+                    <p>A web-based trading simulator with real-time candlestick charts, transaction logging, and portfolio tracking.</p>
+                    <p>> Technologies used: HTML, CSS, JavaScript, Chart.js</p>
+                    <a href="#" class="button">VIEW PROJECT</a>
+                </div>
+                
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <h3>E-COMMERCE PLATFORM</h3>
+                    <p>Full-featured e-commerce website with product catalog, shopping cart, and user authentication.</p>
+                    <p>> Technologies used: React, Node.js, MongoDB</p>
+                    <a href="#" class="button">VIEW PROJECT</a>
+                </div>
+                
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <h3>TASK MANAGEMENT APP</h3>
+                    <p>Productivity application for managing tasks with drag-and-drop interface and team collaboration.</p>
+                    <p>> Technologies used: Vue.js, Firebase, CSS3</p>
+                    <a href="#" class="button">VIEW PROJECT</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact">
+            <h2><span class="blink">*</span> CONTACT ME <span class="blink">*</span></h2>
+            <div class="about-content">
+                <p>Feel free to reach out if you want to collaborate or just say hello!</p>
+                
+                <div class="divider"></div>
+                
+                <h3>CONNECT WITH ME</h3>
+                <p>> Email: your.email@example.com</p>
+                <p>> GitHub: github.com/yourusername</p>
+                <p>> LinkedIn: linkedin.com/in/yourprofile</p>
+                
+                <div class="divider"></div>
+                
+                <h3>SEND ME A MESSAGE</h3>
+                <p>// Simple contact form would go here</p>
+                <a href="mailto:your.email@example.com" class="button">SEND EMAIL</a>
+            </div>
+        </section>
+        
+        <!-- ===== FOOTER ===== -->
+        <footer>
+            <p>© 2023 VENTRAPRAGADA SAI PRANAV. ALL RIGHTS RESERVED.</p>
+            <p>This page best viewed in 800×600 resolution with 256 colors</p>
+            <p>Last updated: <span id="date"></span></p>
+        </footer>
+    </div>
+
+    <script>
+        // ===== SET CURRENT DATE IN FOOTER =====
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+        
+        // ===== SIMPLE VISITOR COUNTER =====
+        // This is a simple counter that uses localStorage
+        // In a real application, you would use a server-side solution
+        if (localStorage.getItem('visitorCount')) {
+            let count = parseInt(localStorage.getItem('visitorCount')) + 1;
+            localStorage.setItem('visitorCount', count);
+            document.querySelector('.counter').innerHTML = '<span class="blink">VISITORS:</span> ' + count.toString().padStart(7, '0');
+        } else {
+            localStorage.setItem('visitorCount', 1);
+            document.querySelector('.counter').innerHTML = '<span class="blink">VISITORS:</span> 0000001';
+        }
+        
+        // ===== BLINKING TEXT EFFECT =====
+        // This creates the classic <blink> tag effect
+        const blinkElements = document.querySelectorAll('.blink');
+        setInterval(() => {
+            blinkElements.forEach(element => {
+                element.style.visibility = element.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            });
+        }, 500);
+    </script>
+</body>
+</html>
